@@ -20,6 +20,7 @@ templates/views/: Contains Handlebars templates for rendering HTML.<br>
 Controller: Contains function to perform the operation related with API’s<br>
 Models: Contain Schema for the database<br>
 **How to Play:** <br>
+start with X player as first turn always<br>
 1 Open the application in your browser (http://localhost:3000).<br>
 2 Enter your name and click "Search for a player."<br>
 3 Wait for an opponent to join the game.<br>
