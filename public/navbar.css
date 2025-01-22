@@ -1,0 +1,55 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: greenyellow;
+  }
+
+
+.navbar-nav .nav-link.show{
+  color: white !important;
+}
+
+.dropdown-menu a{
+    color:black !important;
+}
+
+
+.navbar{
+    background-color: #333 !important;
+  }
+  
+  
+
+.navbar-nav a{
+    font-size: 1.7rem;
+    color: white;
+    margin: 1rem;
+  }
+
+  .text-size{
+    font-size: 1.7rem;
+    color: black;
+    margin: 1rem;
+  }
+  
+
+  .navbar-nav a:hover {
+    color:#04AA6D;
+  }
+
+  .navbar-nav a.active {
+    color: #04AA6D;
+  }
+  
+  nav a.active {
+    color: #04AA6D;
+  }
+
+  .drop_btn{
+    text-decoration: none;
+  }

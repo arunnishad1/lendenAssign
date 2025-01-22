@@ -1,0 +1,85 @@
+*{
+    margin: 0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+
+.title{
+    font-size: 5rem;
+}
+
+p{
+    font-size: 2rem;
+}
+.content_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:5rem;
+}
+
+.player_search_box{
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap:2rem;
+}
+
+.player_search_box input{
+    margin: 10px 0;
+    border: none;
+    font-size: 2rem !important;
+    border-radius: .5rem;
+    padding-inline: 4.1rem;
+    padding-block: 1.2rem;
+    outline: none;
+    border: 1px solid #ccc;
+    
+}
+
+.player_search_box button{
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    font-size: 2rem !important;
+    cursor: pointer;
+    width: 100%;
+}
+
+.playBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+}
+.box {
+    background-color: white;
+    border: 2px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+img{
+    background-color: greenyellow;
+    height: 6rem;
+    width:6rem;
+    margin-left:12rem;
+}
+
+
+button:hover{
+    cursor: pointer;
+}
