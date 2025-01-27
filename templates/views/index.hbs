@@ -31,15 +31,15 @@
         <img src="loading.svg" id="loading_animation" alt="loading" />
 
         <div class="playBoard">
-                <div id="box1" class="box"></div>
-                <div id="box2" class="box"></div>
-                <div id="box3" class="box"></div>
-                <div id="box4" class="box"></div>
-                <div id="box5" class="box"></div>
-                <div id="box6" class="box"></div>
-                <div id="box7" class="box"></div>
-                <div id="box8" class="box"></div>
-                <div id="box9" class="box"></div>
+                <button id="box1" class="box"></button>
+                <button id="box2" class="box"></button>
+                <button id="box3" class="box"></button>
+                <button id="box4" class="box"></button>
+                <button id="box5" class="box"></button>
+                <button id="box6" class="box"></button>
+                <button id="box7" class="box"></button>
+                <button id="box8" class="box"></button>
+                <button id="box9" class="box"></button>
         </div>
     </div>  
 </div>
@@ -147,14 +147,14 @@
 
         if(p1ID!=''){
             document.getElementById(`${p1ID}`).innerText = "X";
-            document.getElementById(`${p1ID}`).disabled = "true";
-            document.getElementById(`${p1ID}`).backgroundColor = "gray";
+            document.getElementById(`${p1ID}`).disabled = true;
+            document.getElementById(`${p1ID}`).style.backgroundColor = "gray";
         }
 
         if(p2ID!=''){
             document.getElementById(`${p2ID}`).innerText = "O";
-            document.getElementById(`${p2ID}`).disabled = "true";
-            document.getElementById(`${p2ID}`).backgroundColor = "gray";
+            document.getElementById(`${p2ID}`).disabled = true;
+            document.getElementById(`${p2ID}`).style.backgroundColor = "gray";
         }
 
         checkWinner(userName, foundObject.sum);
