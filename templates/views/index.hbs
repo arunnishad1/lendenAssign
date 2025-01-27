@@ -148,13 +148,11 @@
         if(p1ID!=''){
             document.getElementById(`${p1ID}`).innerText = "X";
             document.getElementById(`${p1ID}`).disabled = true;
-            document.getElementById(`${p1ID}`).style.backgroundColor = "gray";
         }
 
         if(p2ID!=''){
             document.getElementById(`${p2ID}`).innerText = "O";
             document.getElementById(`${p2ID}`).disabled = true;
-            document.getElementById(`${p2ID}`).style.backgroundColor = "gray";
         }
 
         checkWinner(userName, foundObject.sum);
