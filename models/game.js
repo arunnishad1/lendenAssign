@@ -6,6 +6,9 @@ const GameSchema = new mongoose.Schema({
     winnerType: {
         type:String,
     },
+    playType:{
+        type:String,
+    },
     date: { 
         type: Date, 
         default: new Date().toString().split(' GMT')[0]
