@@ -244,10 +244,11 @@ const getUser = async (req, res) => {
 
 const saveGame = async (req, res) => {
   try {
-    const { username, winnerType } = req.body;
+    const { username, winnerType, playType } = req.body;
     const newGame = new game({
       username: username,
       winnerType: winnerType,
+      playType:playType,
     });
     await newGame.save();
     return res.json(newGame);
