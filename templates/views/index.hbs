@@ -85,6 +85,8 @@
         }
     });
 
+    var oppName;
+    var value;
     socket.on("find", (e) => {
         let allPlayer = e.playerArray;
 
@@ -110,9 +112,6 @@
             child.style.boxSizing = "border-box"; // Ensure padding/border are included in size
         });
         whosTurn.innerText = "X's turn"
-
-        let oppName;
-        let value;
 
         const foundObj = allPlayer.find((obj) =>obj.p1.p1Name == `${userName}` || obj.p2.p2Name == `${userName}`)
 
@@ -155,11 +154,11 @@
             document.getElementById(`${p2ID}`).disabled = true;
         }
 
-        checkWinner(userName, foundObject.sum);
+        checkWinner(userName, foundObject.sum, value);
     })
 
 
-    function checkWinner(name, sum){
+    function checkWinner(name, sum, playType){
         document.getElementById("box1").innerText == '' ? b1 = 'a' : b1 = document.getElementById("box1").innerText
         document.getElementById("box2").innerText == '' ? b2 = 'b' : b2 = document.getElementById("box2").innerText
         document.getElementById("box3").innerText == '' ? b3 = 'c' : b3 = document.getElementById("box3").innerText
@@ -186,12 +185,13 @@
                         body: JSON.stringify({
                             username:name,
                             winnerType: resultMessage,
+                            playType:playType,
                         }),
                         headers: {
                             "Content-Type": "application/json",
                         },
                     });
-                    alert(`PLayer ${resultMessage} won`); // Show the winner
+                    alert(`Player ${resultMessage} won`); // Show the winner
                 } catch (error) {
                     console.error("Error saving game data:", error);
                 }
