@@ -206,14 +206,27 @@
 
         else if(sum==10){
             socket.emit("gameOver", {name:name})
-
-                        setTimeout(()=>{
-                            alert("DRAW !!")
-
-                            setTimeout(()=>{
-                                location.reload()
-                            },2000)
-
+                setTimeout(async()=>{
+                    try {
+                    // Send winner data to the database
+                    await fetch("http://localhost:3000/save-game", {
+                        method: "POST",
+                        body: JSON.stringify({
+                            username:name,
+                            winnerType: "DRAW",
+                            playType:playType,
+                        }),
+                        headers: {
+                            "Content-Type": "application/json",
+                        },
+                    });
+                    alert("DRAW !!")
+                    } catch (error) {
+                        console.error("Error saving game data:", error);
+                    }
+                    setTimeout(()=>{
+                        location.reload()
+                    },2000)
                 },100)
             }
     }
